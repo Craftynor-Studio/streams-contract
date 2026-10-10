@@ -10,6 +10,8 @@ The app displays one progress item from manifest transfer through the final save
 
 [JSON Schema](v1/schema.json) · [Direct download](examples/direct.streams.json) · [Audio/video mux](examples/mux.streams.json) · [Ordered merge](examples/merge.streams.json)
 
+The media examples use placeholder resource URLs. [This document example](examples/document.streams.json) downloads the actual public specification and demonstrates a complete direct-file job.
+
 ```json
 {
   "format": "craftynor.streams",

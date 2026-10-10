@@ -10,7 +10,7 @@ const validate = ajv.compile(schema);
 const sample = async name => JSON.parse(await readFile(new URL(`../examples/${name}.streams.json`, import.meta.url), 'utf8'));
 
 test('all published examples validate against the strict 2020-12 schema', async () => {
-  for (const name of ['direct', 'mux', 'merge']) assert.equal(validate(await sample(name)), true, JSON.stringify(validate.errors));
+  for (const name of ['direct', 'mux', 'merge', 'document']) assert.equal(validate(await sample(name)), true, JSON.stringify(validate.errors));
 });
 test('schema rejects unknown fields, versions, non-HTTPS links and invalid filenames', async () => {
   const manifest = await sample('direct');
